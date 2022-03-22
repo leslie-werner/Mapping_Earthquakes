@@ -42,7 +42,7 @@ let baseMaps = {
 //D2 1. Add a 3rd layer group for the major earthquake data.
 let allEarthquakes = new L.LayerGroup();
 let tectonicPlates = new L.LayerGroup();
-let majorEarthquake = new L.LayerGroup();
+let majorEarthquakes = new L.LayerGroup();
 
 
 // D1 2. Add a reference to the tectonic plates group to the overlays object.
@@ -50,7 +50,7 @@ let majorEarthquake = new L.LayerGroup();
 let overlays = {
   "Earthquakes": allEarthquakes,
   "Tectonic Plate": tectonicPlates,
-  "Major Earthquakes": majorEarthquake
+  "Major Earthquakes": majorEarthquakes
 
 };
 
@@ -142,7 +142,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
       weight: 0.5
     };
   }
-// 5. Change the color function to use three colors for the major earthquakes based on the magnitude of the earthquake.
+// 5. Change the color function to use  three colors for the major earthquakes based on the magnitude of the earthquake.
   // This function determines the color of the marker based on the magnitude of the earthquake.
   function getColor(magnitude) {
     if (magnitude > 6) {
